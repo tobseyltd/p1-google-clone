@@ -1,32 +1,46 @@
 // @ts-nocheck
+
 window.addEventListener('DOMContentLoaded', () => {
-    // Alle Formular Elemente aus dem DOM ziehen
-    const form = document.getElementById('form');
-    const formResults = document.getElementById('results');
-    const nameInput = document.getElementById('name');
-    const streetInput = document.getElementById('street');
-    const streetNumberInput = document.getElementById('street-number');
-    const cityInput = document.getElementById('city');
-    const zipInput = document.getElementById('zip-code');
-    const emailInput = document.getElementById('email');
-    const submitButton = document.getElementById('submit-button');
+    // Alle Elemente aus dem DOM ziehen
+    const searchInput = document.getElementById('searchInput');
+    const submitButton = document.getElementById('submitButton');
+    const suggestionSection = document.getElementById('suggestionSection');
+    const searchSection = document.querySelector('search');
 
-    // Alle Ergebnis Elemente aus dem DOM ziehen
-    const resultName = document.getElementById('result-name');
-    const resultStreet = document.getElementById('result-street');
-    const resultCity = document.getElementById('result-city');
-    const resultEmail = document.getElementById('result-email');
+    const suggestResults = ['Javascript', 'Javascript lernen', 'Javascript array'];
+    let searchInputValue = '';
 
+    searchInput.addEventListener('input', ({ target: { value } }) => {
+        searchInputValue = value.toLowerCase();
+        suggestionSection.innerHTML = '';
 
-    // Ausblenden / Einblenden der Container & Übergabe Werte
-    submitButton.addEventListener('click', () => {
-        resultName.append(nameInput.value);
-        resultStreet.append(streetInput.value + ' ' + streetNumberInput.value);
-        resultCity.append(zipInput.value + ' ' + cityInput.value);
-        resultEmail.append(emailInput.value);
+        searchSection.style.borderRadius = '20px 20px 0 0';
+        searchSection.style.background = '#303134';
+        searchSection.style.border = 'none';
+        suggestionSection.style.display = 'flex';
 
-        form.style.display = 'none';
-        formResults.style.display = 'flex';
-        submitButton.style.display = 'none';
+        if (!searchInputValue) {
+            suggestionSection.style.display = 'none';
+            searchSection.style.borderRadius = '50px';
+            searchSection.style.border = '1px solid #5f6368';
+            searchSection.style.background = 'transparent';
+        }
+
+        suggestResults.forEach((suggest) => {
+            if (suggest.toLowerCase().includes(searchInputValue)) {
+                const searchSuggestion = document.createElement('search-suggestion');
+
+                searchSuggestion.innerHTML = `
+                    <img src="./assets/search.svg" alt width="17" height="17" /> ${suggest}
+                `;
+
+                suggestionSection.appendChild(searchSuggestion);
+            } else {
+                suggestionSection.style.display = 'none';
+                searchSection.style.borderRadius = '50px';
+                searchSection.style.border = '1px solid #5f6368';
+                searchSection.style.background = 'transparent';
+            }
+        });
     });
 });
