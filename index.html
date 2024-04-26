@@ -25,7 +25,9 @@
                         height="20px"
                     />
                 </a>
-                <a href="" aria-label="Anmelden"><span>Anmelden</span></a>
+                <a href="" aria-label="Anmelden" title="Im Konto anmelden">
+                    <span class="login-button">Anmelden</span>
+                </a>
             </right-side>
         </header>
 
@@ -42,9 +44,9 @@
             <search-container>
                 <search>
                     <img src="./assets/search.svg" alt width="17px" height="17px" />
-                    <input class="search-icons" type="search" name="search" id="search" />
+                    <input type="search" name="searchInput" id="searchInput" />
 
-                    <button class="searchbar-buttons" aria-label="Sprachsuche">
+                    <button class="searchbar-buttons" aria-label="Sprachsuche" title="Sprachsuche">
                         <img
                             class="search-icons"
                             src="./assets/google-voice-search.svg"
@@ -53,7 +55,7 @@
                             height="23px"
                         />
                     </button>
-                    <button class="searchbar-buttons" aria-label="Bildersuche">
+                    <button class="searchbar-buttons" aria-label="Bildersuche" title="Bildersuche">
                         <img
                             class="search-icons"
                             src="./assets/google-img-search.svg"
@@ -65,7 +67,7 @@
                 </search>
 
                 <search-button-section>
-                    <button class="search-buttons">Google Suche</button>
+                    <button class="search-buttons" id="submitButton">Google Suche</button>
                     <button class="search-buttons">Auf gut Glück!</button>
                 </search-button-section>
             </search-container>
