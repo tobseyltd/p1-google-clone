@@ -1,6 +1,6 @@
 # Project 1 - Vanilla HTML, CSS & JS
 
-👉 DEV Version - dev-branch GitHub Pages: https://tobseyltd.github.io/ep-201-free/ <br />
+👉 DEV Version - dev-branch GitHub Pages: https://chris-loves-fronted.github.io/p1-google-clone/ <br />
 👉 LIVE Version - main-branch Netlify: https://tobseyltd.github.io/ep-201-free/
 
 ---
