@@ -3,13 +3,14 @@
 window.addEventListener('DOMContentLoaded', () => {
     // Alle Elemente aus dem DOM ziehen
     const searchInput = document.getElementById('searchInput');
-    const submitButton = document.getElementById('submitButton');
     const suggestionSection = document.getElementById('suggestionSection');
     const searchSection = document.querySelector('search');
 
     const suggestResults = ['Javascript', 'Javascript lernen', 'Javascript array'];
+
     let searchInputValue = '';
 
+    // Auf Suchinput hören und Vorschläge geben
     searchInput.addEventListener('input', ({ target: { value } }) => {
         searchInputValue = value.toLowerCase();
         suggestionSection.innerHTML = '';
@@ -20,10 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
         suggestionSection.style.display = 'flex';
 
         if (!searchInputValue) {
-            suggestionSection.style.display = 'none';
-            searchSection.style.borderRadius = '50px';
-            searchSection.style.border = '1px solid #5f6368';
-            searchSection.style.background = 'transparent';
+            styleSections();
         }
 
         suggestResults.forEach((suggest) => {
@@ -36,11 +34,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 suggestionSection.appendChild(searchSuggestion);
             } else {
-                suggestionSection.style.display = 'none';
-                searchSection.style.borderRadius = '50px';
-                searchSection.style.border = '1px solid #5f6368';
-                searchSection.style.background = 'transparent';
+                styleSections();
             }
         });
     });
+
+    // Helper Functions
+    function styleSections() {
+        suggestionSection.style.display = 'none';
+        searchSection.style.borderRadius = '50px';
+        searchSection.style.border = '1px solid #5f6368';
+        searchSection.style.background = 'transparent';
+    }
 });
