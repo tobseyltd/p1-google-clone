@@ -1,6 +1,7 @@
 # EP-103 Free Tutorial Project
 
-👉 Live Version: https://tobseyltd.github.io/ep-201-free/
+👉 DEV Version - dev-branch GitHub Pages: https://chris-loves-fronted.github.io/p1-google-clone/
+👉 LIVE Version - main-branch Netlify: https://tobseyltd.github.io/ep-201-free/
 
 ---
 
