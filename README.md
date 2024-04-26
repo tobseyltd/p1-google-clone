@@ -1,6 +1,7 @@
-# EP-103 Free Tutorial Project
+# Project 1 - Vanilla HTML, CSS & JS
 
-👉 Live Version: https://tobseyltd.github.io/ep-201-free/
+👉 DEV Version - dev-branch GitHub Pages: https://tobseyltd.github.io/ep-201-free/
+👉 LIVE Version - main-branch Netlify: https://tobseyltd.github.io/ep-201-free/
 
 ---
 
