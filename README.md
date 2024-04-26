@@ -5,19 +5,22 @@
 
 ---
 
-In diesem Tutorial geht es darum Javascript mit Verstand zu lernen. Nutze das Video um wichtige
-Konzepte zu verstehen und anzuwenden.
+## Description
 
-⚠️ Wichtig:
+🔥 In this project i re-built the google search page and its functionality
+within the input search field. I created an suggestions array with strings
+and on user input, user gets a search suggestions box based on the letter
+he is typing in.
 
-👉 Downloade das Projekt komplett oder nur die Assets<br /> 👉 Beginne dann mit dem Nachbau des Web
-Projekts aus dem Tutorial.<br /> 👉 Suche dir ein ähnliches Projekt und baue es mit deinem neu
-erlangten Wissen nach.<br /> 👉 Überprüfe dein Wissen indem du das Quiz auf der EP-Website
-absolvierst.<br /> 👉 Wenn du kannst commite deinen Code in ein eigenes GitHub Repo<br />
+⚠️ Suggest-Array is ['Javascript', 'Javascript lernen', 'Javascript array']
 
-🔥 Komm in die programmieren-lernen.rocks Community und erhalte zusätzlichen Deep Dive Content zu
-dieser Lektion und eine Bonus Challenge, die auf dem Wissen dieses Tutorials aufbaut.
 
-Link zum Mitglieder Content:
-[www.programmieren-lernen.rocks/ep-103](www.programmieren-lernen.rocks/ep-201)
+## Stack & Decisions
+
++ Semantic HTML Markup <br />
++ Vanilla JavaScript <br />
++ Modern Vanilla CSS (Nested) <br />
++ Defered JS implementations <br />
++ Waiting for DOMContentLoaded <br />
+
 
