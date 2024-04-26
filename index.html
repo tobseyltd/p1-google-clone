@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Google Clone</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <header role="navigation">
@@ -44,7 +45,8 @@
             <search-container>
                 <search>
                     <img src="./assets/search.svg" alt width="17px" height="17px" />
-                    <input type="search" name="searchInput" id="searchInput" />
+
+                    <input type="search" name="searchInput" id="searchInput" title="Suche" />
 
                     <button class="searchbar-buttons" aria-label="Sprachsuche" title="Sprachsuche">
                         <img
@@ -55,6 +57,7 @@
                             height="23px"
                         />
                     </button>
+
                     <button class="searchbar-buttons" aria-label="Bildersuche" title="Bildersuche">
                         <img
                             class="search-icons"
@@ -65,6 +68,9 @@
                         />
                     </button>
                 </search>
+                <search-suggestion-section id="suggestionSection">
+                    <!-- Filled with JavaSript -->
+                </search-suggestion-section>
 
                 <search-button-section>
                     <button class="search-buttons" id="submitButton">Google Suche</button>
